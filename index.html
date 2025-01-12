@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conecta 4</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Título del juego -->
+    <div id="letreroConecta4">CONECTA 4</div>
+
+    <!-- Sonidos del juego -->
+    <audio id="musicaFondo" src="music/dance-ambient-26-10562.mp3" loop autoplay></audio>
+    <audio id="sonidoFicha" src="music/colocar-ficha.mp3"></audio>
+    <audio id="sonidoVictoria" src="music/victoria.mp3"></audio>
+    <audio id="sonidoDerrota" src="music/derrota.mp3"></audio>
+    <audio id="sonidoClick" src="music/click.mp3"></audio>
+
+    <!-- Menú inicial -->
+    <div id="menuInicio">
+        <div id="gifConecta4">
+            <img src="images/conecta4.gif" alt="Animación de Conecta 4">
+        </div>
+        <div id="guiaUsuario">
+            <h2>Guía del Usuario</h2>
+            <p>Bienvenido a Conecta 4. Aquí están las reglas básicas:</p>
+            <ul>
+                <li>El objetivo es alinear 4 fichas de tu color en fila, columna o diagonal.</li>
+                <li>Selecciona la dificultad y el color de tus fichas antes de empezar.</li>
+                <li>¡Compite contra la máquina y demuestra tus habilidades estratégicas!</li>
+            </ul>
+            <button id="verGuiaCompleta">Ver Guía Completa</button>
+        </div>
+    </div>
+
+    <!-- Control de música -->
+    <div id="controlMusica">
+        <button id="toggleMusica">🔊 Desactivar Música</button>
+    </div>
+
+    <!-- Configuración del juego -->
+    <div id="configuracion">
+        <h2>JUGAR</h2>
+        <label for="dificultad">Dificultad:</label>
+        <select id="dificultad">
+            <option value="facil">Fácil</option>
+            <option value="dificil">Difícil</option>
+        </select>
+
+        <label for="colorFicha">Color de ficha:</label>
+        <select id="colorFicha">
+            <option value="rojo">Rojo</option>
+            <option value="azul">Azul</option>
+        </select>
+        <button id="iniciarJuego">Iniciar Juego</button>
+    </div>
+
+    <!-- Contenedor del tablero -->
+    <div id="contenedorJuego">
+        <div id="tableroJuego" class="oculto"></div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>

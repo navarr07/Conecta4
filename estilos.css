@@ -1,0 +1,223 @@
+/* ------Estilos generales------ */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f8ff;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; 
+}
+
+h1 {
+    color: #333;
+}
+
+button, select {
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+input[type="text"] {
+    padding: 8px;
+    margin: 5px 0;
+    border: 2px solid #007BFF;
+    border-radius: 8px;
+    font-size: 1rem;
+    width: calc(100% - 20px);
+    box-sizing: border-box;
+}
+
+.oculto {
+    display: none !important ;
+}
+
+button:active {
+    transform: scale(0.95);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* ------Título principal ------*/
+#letreroConecta4 {
+    font-family: 'Poppins', sans-serif; 
+    font-size: 4rem; 
+    font-weight: 700; 
+    text-align: center;
+    margin: 20px 0;
+    animation: cambioColor 2s infinite;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes cambioColor {
+    0% { color: #ff0000; }
+    25% { color: #ffa500; }
+    50% { color: #ffff00; }
+    75% { color: #008000; }
+    100% { color: #0000ff; }
+}
+
+/* ------Configuración inicial------ */
+#configuracion {
+    margin-bottom: 20px;
+}
+
+#configuracionIA, #configuracion1vs1 {
+    margin: 20px 0;
+}
+
+select {
+    background-color: #f0f8ff;
+    border: 2px solid #007BFF;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 1rem;
+    color: #333;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+select:hover {
+    background-color: #007BFF;
+    color: white;
+}
+
+/* ------Botones------ */
+#iniciarJuego {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+#iniciarJuego:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+#iniciarJuego:active {
+    background-color: #1e7e34;
+}
+
+#verGuiaCompleta {
+    display: block;
+    margin: 20px auto 0; 
+    text-align: center;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+}
+
+#verGuiaCompleta:hover {
+    background-color: #0056b3;
+}
+
+/* Control de música */
+#controlMusica {
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+#toggleMusica {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+#toggleMusica:hover {
+    background-color: #0056b3;
+}
+
+/* ------Tablero de juego------ */
+#tableroJuego {
+    display: grid;
+    grid-template-columns: repeat(7, 80px);
+    grid-gap: 5px;
+    justify-content: center;
+}
+
+.celda {
+    width: 80px;
+    height: 80px;
+    background-color: #add8e6;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+}
+
+.celda.roja {
+    background-color: red;
+}
+
+.celda.azul {
+    background-color: #00d0ff;
+}
+
+/* ------Menú inicial------ */
+#menuInicio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    gap: 20px;
+}
+
+#gifConecta4 img {
+    height: 300px;
+    width: 300px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+/* ------Guía del usuario------ */
+#guiaUsuario {
+    max-width: 400px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+#guiaUsuario h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#guiaUsuario ul {
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+/* ------Contenedor del juego------*/
+#contenedorJuego {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+}

@@ -25,6 +25,6 @@ package.json: Información sobre el proyecto y sus dependencias.
 
 ## Instalación
 1. Clona este repositorio:
-   git clone https://github.com/navarr07/Conecta4.g
+   git clone https://github.com/navarr07/Conecta4
 2. npm start (en la terminal)
 
